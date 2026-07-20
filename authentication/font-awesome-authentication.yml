@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fontawesome.com/apis/graphql/token-endpoint
+docs: https://docs.fontawesome.com/apis/graphql/auth
+summary:
+  types: [http, bearer, token-exchange]
+  api_key_in: [header]
+  public_access: true
+model: >-
+  The Font Awesome GraphQL API is public by default — most schema fields require
+  no authorization. Protected fields (account, Kits, Pro SVG data, entitlements)
+  require a bearer access token. An account-generated API token is POSTed to the
+  token endpoint, which returns a short-lived (3600s) JWT access token whose
+  scopes are inherited from the API token.
+schemes:
+  - name: apiToken
+    type: apiKey
+    in: header
+    parameter: Authorization
+    format: "Bearer <API_TOKEN>"
+    where: POST https://api.fontawesome.com/token
+    description: >-
+      Long-lived API token created from the Font Awesome account dashboard.
+      Exchanged (not used directly on GraphQL requests) for an access token.
+  - name: accessToken
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    in: header
+    parameter: Authorization
+    format: "Bearer <ACCESS_TOKEN>"
+    where: POST https://api.fontawesome.com (GraphQL)
+    expires_in: 3600
+    description: >-
+      Short-lived JWT returned by the token endpoint; carries the granted scopes
+      and is sent on GraphQL requests that access authorized fields.
+token_endpoint:
+  url: https://api.fontawesome.com/token
+  method: POST
+  request: 'Authorization: Bearer <API_TOKEN>'
+  response_fields: [access_token, token_type, scopes, expires_in]
+graphql_endpoint: https://api.fontawesome.com
+scopes_ref: scopes/font-awesome-scopes.yml
