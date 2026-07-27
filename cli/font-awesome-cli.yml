@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fontawesome.com/web/use-with/fa-cli
+name: fa
+description: >-
+  Official Font Awesome command-line tool. Queries icons and releases, searches
+  and downloads Kits, reads account metadata, runs raw GraphQL queries against
+  api.fontawesome.com, and enables the Font Awesome AI agent tools in coding
+  assistants.
+install:
+  macos_linux: "curl --proto '=https' --tlsv1.2 -fsSL https://fontawesome.com/fa-cli/install.sh | bash"
+  windows_powershell: "irm https://fontawesome.com/fa-cli/install.ps1 | iex"
+auth:
+  login_command: fa login
+  session_check: fa whoami
+  env_token: FA_API_TOKEN
+commands:
+  - name: fa login
+    purpose: Log in to your fontawesome.com account to access your Kits and account.
+  - name: fa whoami
+    purpose: Show the currently authenticated account / session status.
+  - name: fa search
+    purpose: Search for icons across Font Awesome versions, or within your Kits.
+  - name: fa icons
+    purpose: List all icons in a given version of Font Awesome.
+  - name: fa icon-packs
+    purpose: Show metadata about Icon Collections, Icon Packs, and Visual Tags.
+  - name: fa releases
+    purpose: List all releases of Font Awesome.
+  - name: fa query
+    purpose: Run a raw GraphQL query against the Font Awesome API and print the JSON response.
+  - name: fa kits
+    purpose: List your Kits and their metadata.
+  - name: fa kit show
+    purpose: Show details of a specific Kit, including custom icons.
+  - name: fa kit icons
+    purpose: List official icons in a specific Kit, according to its subset.
+  - name: fa kit icon
+    purpose: Get a specific official icon in a specific Kit.
+  - name: fa kit family-styles
+    purpose: List the family-styles in a specific Kit.
+  - name: fa kit family-style
+    purpose: Select a particular family-style from a specific Kit.
+  - name: fa kit download
+    purpose: Download a Kit.
+notes: >-
+  The `fa kit` subcommand group requires fa >= 0.8.0. The CLI backs the official
+  agent skills (fontawesome-agent-tools) for kit/account-aware icon discovery.

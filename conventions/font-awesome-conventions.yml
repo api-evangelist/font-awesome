@@ -1,0 +1,58 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fontawesome.com/apis/graphql
+docs: https://docs.fontawesome.com/apis/graphql/query-fields
+api_style: graphql
+endpoint: https://api.fontawesome.com
+transport:
+  protocol: GraphQL over HTTP POST
+  content_type: application/json
+  single_endpoint: true
+authentication:
+  style: bearer-jwt (via token exchange)
+  header: Authorization
+  ref: authentication/font-awesome-authentication.yml
+  public_by_default: true
+authorization:
+  model: scope-per-field
+  ref: scopes/font-awesome-scopes.yml
+  note: Individual GraphQL fields require specific scopes on the access token.
+pagination:
+  style: page-based
+  pattern: >-
+    Paginated fields accept `page` and `pageSize` arguments and return an object
+    carrying the items plus `page`, `pageSize`, total-count and `totalPageCount`
+    fields (e.g. searchPaginated, IconsPaginated, IconVariantsPaginated,
+    FamilyStyleSubsetPaginated).
+  request_params: [page, pageSize]
+  response_fields: [page, pageSize, totalPageCount, totalIconCount, totalFamilyStyleCount, totalIconVariantCount]
+versioning:
+  scheme: product-version-argument
+  note: >-
+    API queries are parameterized by Font Awesome release version (e.g.
+    version "7.x" or "7.0.0") rather than an API version in the URL; the schema
+    itself is unversioned and evolves via GraphQL deprecations.
+  ref: lifecycle/font-awesome-lifecycle.yml
+deprecation:
+  mechanism: graphql-deprecation
+  note: Deprecated fields are marked with the @deprecated directive (e.g. the root `search` query, superseded by `searchPaginated`).
+error_envelope:
+  style: graphql-errors
+  note: >-
+    Errors are returned in the standard GraphQL top-level `errors[]` array
+    (message + locations + path) alongside partial `data`; HTTP status is
+    typically 200 even for field-level errors. Not RFC 9457 problem+json.
+idempotency:
+  supported: false
+  note: Read-heavy GraphQL API; queries are naturally idempotent, mutations (createKitDownload, createSubset) expose no idempotency-key mechanism.
+rate_limiting:
+  documented: false
+  note: No public rate-limit headers documented; Pro plans carry pageview/CDN limits at the product level.
+events:
+  graphql_subscriptions: [subsetCreated]
+  note: The schema exposes a RootSubscriptionType with a `subsetCreated` subscription; there is no webhook/AsyncAPI surface.
+cross_references:
+  authentication: authentication/font-awesome-authentication.yml
+  scopes: scopes/font-awesome-scopes.yml
+  data_model: data-model/font-awesome-data-model.yml
+  lifecycle: lifecycle/font-awesome-lifecycle.yml

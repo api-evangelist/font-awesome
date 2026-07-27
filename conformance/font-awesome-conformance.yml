@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: derived
+source: graphql/font-awesome.graphql
+docs: https://docs.fontawesome.com/apis/graphql
+standards:
+  - id: graphql
+    conforms: true
+    evidence: Single GraphQL endpoint at api.fontawesome.com with introspectable schema (RootQueryType/RootMutationType/RootSubscriptionType).
+  - id: graphql-introspection
+    conforms: true
+    evidence: __schema introspection is enabled and public (graphql/font-awesome-introspection.json).
+  - id: bearer-token-auth
+    conforms: true
+    evidence: RFC 6750 style Authorization Bearer tokens; JWT access tokens minted via /token endpoint.
+  - id: oauth2
+    conforms: false
+    evidence: Uses a proprietary API-token-for-access-token exchange, not standard OAuth 2.0 grant flows.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors returned via the GraphQL errors[] array, not application/problem+json.
+  - id: openapi
+    conforms: false
+    evidence: API is GraphQL; no OpenAPI/REST surface published.
+  - id: webhooks
+    conforms: false
+    evidence: No webhook surface; only an in-band GraphQL subscription (subsetCreated).

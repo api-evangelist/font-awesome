@@ -1,0 +1,120 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/FortAwesome and https://www.npmjs.com/org/fortawesome
+packages:
+  # Core
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/fontawesome-svg-core"
+    url: https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core
+    install: npm install @fortawesome/fontawesome-svg-core
+    official: true
+    description: Core SVG-with-JS engine used by all official framework components.
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/fontawesome-free"
+    url: https://www.npmjs.com/package/@fortawesome/fontawesome-free
+    install: npm install @fortawesome/fontawesome-free
+    official: true
+    description: Font Awesome Free (webfonts + CSS + SVG sprites).
+  # Free icon SVG packages
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/free-solid-svg-icons"
+    url: https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons
+    install: npm install @fortawesome/free-solid-svg-icons
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/free-regular-svg-icons"
+    url: https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons
+    install: npm install @fortawesome/free-regular-svg-icons
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/free-brands-svg-icons"
+    url: https://www.npmjs.com/package/@fortawesome/free-brands-svg-icons
+    install: npm install @fortawesome/free-brands-svg-icons
+    official: true
+  # Framework components (official)
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/react-fontawesome"
+    url: https://www.npmjs.com/package/@fortawesome/react-fontawesome
+    install: npm install @fortawesome/react-fontawesome
+    official: true
+    repo: https://github.com/FortAwesome/react-fontawesome
+    description: Official React component.
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/vue-fontawesome"
+    url: https://www.npmjs.com/package/@fortawesome/vue-fontawesome
+    install: npm install @fortawesome/vue-fontawesome
+    official: true
+    repo: https://github.com/FortAwesome/vue-fontawesome
+    description: Official Vue.js component.
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/angular-fontawesome"
+    url: https://www.npmjs.com/package/@fortawesome/angular-fontawesome
+    install: npm install @fortawesome/angular-fontawesome
+    official: true
+    repo: https://github.com/FortAwesome/angular-fontawesome
+    description: Official Angular component (Angular 5+).
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/ember-fontawesome"
+    url: https://www.npmjs.com/package/@fortawesome/ember-fontawesome
+    install: npm install @fortawesome/ember-fontawesome
+    official: true
+    repo: https://github.com/FortAwesome/ember-fontawesome
+    description: Official Ember component.
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/react-native-fontawesome"
+    url: https://www.npmjs.com/package/@fortawesome/react-native-fontawesome
+    install: npm install @fortawesome/react-native-fontawesome
+    official: true
+    repo: https://github.com/FortAwesome/react-native-fontawesome
+    description: Official React Native component.
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/svelte-fontawesome"
+    url: https://www.npmjs.com/package/@fortawesome/svelte-fontawesome
+    install: npm install @fortawesome/svelte-fontawesome
+    official: true
+    repo: https://github.com/FortAwesome/svelte-fontawesome
+    description: Official Svelte component.
+  # UI component
+  - language: javascript
+    registry: npm
+    name: "@fortawesome/fa-icon-chooser"
+    url: https://www.npmjs.com/package/@fortawesome/fa-icon-chooser
+    install: npm install @fortawesome/fa-icon-chooser
+    official: true
+    repo: https://github.com/FortAwesome/fa-icon-chooser
+    description: Icon-picker web component.
+  # Ruby gems
+  - language: ruby
+    registry: rubygems
+    name: font-awesome-sass
+    url: https://rubygems.org/gems/font-awesome-sass
+    install: gem install font-awesome-sass
+    official: true
+    repo: https://github.com/FortAwesome/font-awesome-sass
+    description: Official Sass gem for Ruby/Rails.
+  # WordPress
+  - language: php
+    registry: wordpress
+    name: font-awesome
+    url: https://wordpress.org/plugins/font-awesome/
+    install: WordPress plugin directory
+    official: true
+    repo: https://github.com/FortAwesome/wordpress-fontawesome
+    description: Official Font Awesome WordPress plugin.
+notes: >-
+  Pro icon SVG packages (@fortawesome/pro-solid-svg-icons, pro-regular-svg-icons,
+  pro-light-svg-icons, pro-thin-svg-icons, pro-duotone-svg-icons, sharp-*) are
+  distributed via Font Awesome's authenticated npm registry to Pro subscribers and
+  are not listed on the public npm registry. Kit packages are published under the
+  @awesome.me/kit-* namespace, one per account Kit.

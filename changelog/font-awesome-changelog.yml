@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fontawesome.com/upgrade/whats-changed
+scheme: semantic-product-version
+current_version: '7.3.1'
+changelog_url: https://docs.fontawesome.com/upgrade/whats-changed
+note: >-
+  Font Awesome publishes changes as versioned release notes / "What's Changed"
+  upgrade guides rather than a dated per-entry API changelog. The GraphQL
+  `releases` query and `release(version:){ date, version, isLatest }` are the
+  machine-readable release feed. Entries below are release-level highlights.
+entries:
+  - version: '7.x'
+    channel: latest
+    highlights:
+      - Font Awesome 7 major release; new Pro+ tier and additional icon packs.
+      - Expanded icon families and styles; Sharp family additions.
+    breaking: true
+    docs: https://docs.fontawesome.com/upgrade/whats-changed
+  - version: '6.x'
+    channel: previous-major
+    highlights:
+      - Sharp family, custom icon uploads in Kits, expanded brands.
+    breaking: true
+    docs: https://docs.fontawesome.com/upgrade/upgrade-from-older-versions

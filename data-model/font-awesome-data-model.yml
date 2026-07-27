@@ -1,0 +1,90 @@
+generated: '2026-07-19'
+method: derived
+source: graphql/font-awesome-introspection.json
+docs: https://docs.fontawesome.com/apis/graphql/objects
+description: >-
+  Entity-relationship graph derived from the Font Awesome GraphQL schema object
+  types. Core domain: Releases contain Icons; Icons resolve to family-styled
+  Variants and SVG path data; Accounts own Kits; Kits subset the icon catalog.
+entities:
+  - name: Release
+    key: version
+    fields: [version, date, isLatest, iconCount, iconIdCount]
+    relationships:
+      - has_many: Icon
+        via: icons / iconsPaginated
+      - has_many: FamilyStyle
+        via: familyStyles
+      - has_one: Download
+        via: download
+      - has_many: Sri
+        via: srisByLicense
+  - name: Icon
+    key: id
+    fields: [id, label, unicode, unicodeHex, unicodeInt]
+    relationships:
+      - has_many: FamilyStyle
+        via: familyStylesByLicense (free/pro)
+      - has_many: Svg
+        via: svgs
+      - has_one: Aliases
+        via: aliases
+      - has_one: Membership
+        via: membership
+      - has_one: Shim
+        via: shim
+  - name: FamilyStyle
+    key: prefix
+    fields: [family, style, prefix, shorthand, label]
+    relationships:
+      - has_many: VisualTag
+        via: visualTags
+  - name: Svg
+    fields: [familyStyle, height, width, pathData, html]
+    relationships:
+      - belongs_to: Icon
+      - has_one: FamilyStyle
+        via: familyStyle
+  - name: IconVariant
+    fields: [familyStyle, name, svg, unicodeHex, unicodeInt]
+    relationships:
+      - belongs_to: Icon
+  - name: Account
+    key: id
+    fields: [id, email, iconCollection, proCdnReferrers]
+    scope_required: profile_read / entitlements_read
+    relationships:
+      - has_many: Kit
+        via: kits
+      - has_one: Kit
+        via: kit
+  - name: Kit
+    fields: [autoAccessibilityEnabled, domains, integrity]
+    scope_required: kits_read
+    relationships:
+      - belongs_to: Account
+      - has_many: IconUpload
+        via: iconUploads
+      - has_many: IconVariant
+        via: iconVariantsPaginated
+      - has_many: FamilyStyle
+        via: familyStylesPaginated
+  - name: IconUpload
+    fields: [name, height, width, pathData, html, unicode, version]
+    relationships:
+      - belongs_to: Kit
+  - name: IconCollection
+    fields: [name, label]
+    relationships:
+      - has_many: IconPack
+        via: iconPacks
+      - has_one: IconCollectionSubset
+        via: subset
+  - name: IconPack
+    fields: [name, label, description, designerName, designerUrl]
+  - name: KitDownload
+    fields: [buildId, status, url]
+    relationships:
+      - belongs_to: Kit
+  - name: SubsetZipArchive
+    fields: [id, readyForDownload, url]

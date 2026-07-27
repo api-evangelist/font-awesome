@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/FortAwesome/fontawesome-agent-tools
+docs: https://docs.fontawesome.com/web/use-with/ai-agent-tools
+note: >-
+  These are Font Awesome's OFFICIAL, provider-published Agent Skills, saved
+  verbatim from the fontawesome-agent-tools repository (plugins/icons/skills/).
+  They are distributed as Vercel "Skills" and installed with
+  `npx skills add FortAwesome/fontawesome-agent-tools`. They are backed by the
+  `fa` CLI (cli/font-awesome-cli.yml) and the GraphQL API. Not
+  API-Evangelist-generated.
+install: npx skills add FortAwesome/fontawesome-agent-tools
+skills:
+  - file: setup-fa/SKILL.md
+    name: setup-fa
+    slash: /setup-fa
+    description: Set up Font Awesome in a project from scratch, including Kit download and package configuration.
+    api: graphql/font-awesome.graphql
+    operations: [search, releases, release]
+  - file: suggest-icon/SKILL.md
+    name: suggest-icon
+    slash: /suggest-icon
+    description: Suggest an icon suitable for a particular situation, noun, verb, or concept.
+    api: graphql/font-awesome.graphql
+    operations: [searchPaginated, releases]
+  - file: add-icon/SKILL.md
+    name: add-icon
+    slash: /add-icon
+    description: Insert an icon with framework-specific code generation into the project.
+    api: graphql/font-awesome.graphql
+    operations: [searchPaginated, release]
+  - file: fa-help/SKILL.md
+    name: fa-help
+    slash: /fa-help
+    description: Answer Font Awesome questions using the official documentation.
+    api: graphql/font-awesome.graphql
+    operations: []

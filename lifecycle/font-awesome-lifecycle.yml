@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fontawesome.com/upgrade/whats-changed
+versioning:
+  scheme: semantic-product-version
+  current: '7.x'
+  latest_release: '7.3.1'
+  note: >-
+    Font Awesome versions the icon product (major releases 4/5/6/7); the GraphQL
+    API is queried by release version argument. Query results are keyed on the
+    release `version` (e.g. "7.x", "7.0.0"); `release(version:).isLatest` and the
+    `releases` query enumerate available versions.
+  docs: https://docs.fontawesome.com/apis/graphql/query-fields
+deprecation:
+  mechanism: graphql-@deprecated
+  policy_url: https://docs.fontawesome.com/upgrade/whats-changed
+  sunset_header: false
+  deprecated_fields:
+    - field: Query.search
+      superseded_by: Query.searchPaginated
+      source: graphql/font-awesome.graphql
+upgrade_guides:
+  - https://docs.fontawesome.com/upgrade/upgrade-from-older-versions
+  - https://docs.fontawesome.com/upgrade/whats-changed
+  - https://docs.fontawesome.com/upgrade/packages
+status_page:
+  documented: false
+  note: No public status page found (status.fontawesome.com did not resolve at probe time).
+sla:
+  documented: false

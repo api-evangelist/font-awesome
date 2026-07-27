@@ -1,0 +1,138 @@
+# Font Awesome Docs
+
+> Official documentation for Font Awesome icons.
+
+- [Font Awesome Docs](https://docs.fontawesome.com/index.md): Official documentation for Font Awesome.
+- [Python/Django Package](https://docs.fontawesome.com/web/use-with/python-django.md): How to add and use Font Awesome icons in Python and Django web projects.
+- [Troubleshooting for Desktop](https://docs.fontawesome.com/desktop/troubleshoot.md): Solutions and tips for resolving common issues with Font Awesome on desktop platforms.
+- [Troubleshooting for Web](https://docs.fontawesome.com/web/troubleshoot.md): Solutions and guidance for fixing common issues with Font Awesome icons in web projects.
+- [Upgrade to v7 from Older Versions](https://docs.fontawesome.com/upgrade/upgrade-from-older-versions.md): Guide to upgrading your project from older versions of Font Awesome to v7.
+- [Upgrade to v7 on the Desktop](https://docs.fontawesome.com/upgrade/upgrade-on-desktop.md): Steps for upgrading Font Awesome assets and tools on desktop environments.
+- [Upgrade to v7 on the Web](https://docs.fontawesome.com/upgrade/upgrade-on-web.md): How to upgrade Font Awesome in web projects to the latest version.
+- [Upgrade to v7 SVGs + SVG Sprites](https://docs.fontawesome.com/upgrade/bare-svgs-and-svg-sprites.md): Instructions for upgrading projects using bare SVGs and SVG sprites to Font Awesome v7.
+- [Upgrade to v7 Using CSS Pseudo-elements](https://docs.fontawesome.com/upgrade/pseudo-elements.md): How to upgrade Font Awesome pseudo-element usage to the latest version.
+- [Upgrade to v7 Using Package Managers](https://docs.fontawesome.com/upgrade/packages.md): Steps for upgrading Font Awesome packages in your project to v7.
+- [Upgrade to v7 with JavaScript Components](https://docs.fontawesome.com/upgrade/js-components.md): Guide to upgrading Font Awesome JavaScript components to the latest version.
+- [Upgrade to v7 with Sass](https://docs.fontawesome.com/upgrade/scss.md): Upgrade your Sass/SCSS project to use Font Awesome v7's preprocessor assets.
+- [Upgrade to v7 with WordPress](https://docs.fontawesome.com/upgrade/wordpress.md): Guide to upgrading Font Awesome in WordPress sites to the latest version.
+- [What's Changed in v7](https://docs.fontawesome.com/upgrade/whats-changed.md): Overview of the major changes and improvements in Font Awesome v7.
+
+## Web
+
+- [Accessibility](https://docs.fontawesome.com/web/dig-deeper/accessibility.md): Learn how to make Font Awesome icons accessible for all users.
+- [Add Icons with React](https://docs.fontawesome.com/web/use-with/react/add-icons.md): Learn how to add and use Font Awesome icons in your React applications.
+- [Add Icons with React Native](https://docs.fontawesome.com/web/use-with/react-native/add-icons.md): Learn how to add and use Font Awesome icons in your React Native applications.
+- [Add Icons with Vue](https://docs.fontawesome.com/web/use-with/vue/add-icons.md): Learn how to add and use Font Awesome icons in your Vue.js applications.
+- [Add Icons with WordPress](https://docs.fontawesome.com/web/use-with/wordpress/add-icons.md): Learn how to add and use Font Awesome icons in your WordPress site.
+- [Adding Icon Styling with React](https://docs.fontawesome.com/web/use-with/react/style.md): Tips and techniques for styling Font Awesome icons in React applications.
+- [Adding Icon Styling with Vue](https://docs.fontawesome.com/web/use-with/vue/style.md): Tips and techniques for styling Font Awesome icons in Vue.js applications.
+- [Advanced Setup Without Kits CDN](https://docs.fontawesome.com/web/use-with/wordpress/advanced-setup.md): Advanced configuration options for integrating Font Awesome with WordPress.
+- [AI Agent Tools](https://docs.fontawesome.com/web/use-with/ai-agent-tools.md): Use Font Awesome icons in your projects with AI coding agent tools.
+- [Angular](https://docs.fontawesome.com/web/use-with/angular.md): Learn how to integrate and use Font Awesome icons in Angular applications.
+- [Animating Icons](https://docs.fontawesome.com/web/style/animate.md): Learn how to add animations to Font Awesome icons for dynamic visual effects.
+- [Bare SVGs on the Web](https://docs.fontawesome.com/web/add-icons/svg-bare.md): Instructions for adding Font Awesome icons directly as SVG elements in your HTML.
+- [Bordered & Pulled Icons](https://docs.fontawesome.com/web/style/pull.md): Learn about pulled and bordered icon styles in Font Awesome.
+- [Browser Support](https://docs.fontawesome.com/web/dig-deeper/browser-support.md): Information about browser compatibility for Font Awesome icons and features.
+- [Conflict Detection](https://docs.fontawesome.com/web/dig-deeper/conflict-detection.md): How Font Awesome detects and resolves conflicts with other libraries or icon sets.
+- [Continuous Integration](https://docs.fontawesome.com/web/dig-deeper/continuous-integration.md): Integrating Font Awesome into your CI/CD workflow for automated builds and deployments.
+- [CSS Pseudo-elements](https://docs.fontawesome.com/web/add-icons/pseudo-elements.md): Guide to adding Font Awesome icons using CSS pseudo-elements for advanced styling.
+- [Customizing Icons](https://docs.fontawesome.com/web/style/custom.md): How to create and apply custom styles to Font Awesome icons.
+- [Dig Deeper](https://docs.fontawesome.com/web/use-with/react/dig-deeper.md): Advanced topics and deeper insights for using Font Awesome with React.
+- [Dig Deeper](https://docs.fontawesome.com/web/use-with/react-native/dig-deeper.md): Advanced topics and deeper insights for using Font Awesome with React Native.
+- [Dig Deeper](https://docs.fontawesome.com/web/use-with/vue/dig-deeper.md): Advanced topics and deeper insights for using Font Awesome with Vue.js.
+- [Duotone Icons](https://docs.fontawesome.com/web/style/duotone.md): Guide to using and styling Duotone Font Awesome icons in your projects.
+- [Ember](https://docs.fontawesome.com/web/use-with/ember.md): Instructions for adding and using Font Awesome icons in Ember projects.
+- [fa CLI](https://docs.fontawesome.com/web/use-with/fa-cli.md): Use Font Awesome with AI coding tools, in CI workflows, or from your terminal
+- [Fast Style Switching](https://docs.fontawesome.com/web/dig-deeper/style-switching.md): How to switch between different Font Awesome icon styles dynamically.
+- [Host Yourself - SVG + JS](https://docs.fontawesome.com/web/setup/host-yourself/svg-js.md): Instructions for self-hosting Font Awesome SVG and JavaScript files in your web project.
+- [Host Yourself - Web Fonts](https://docs.fontawesome.com/web/setup/host-yourself/webfonts.md): Guide to self-hosting Font Awesome web font files for your website.
+- [How To Add Icons](https://docs.fontawesome.com/web/add-icons/how-to.md): Step-by-step instructions for adding Font Awesome icons to your web projects.
+- [Icon Design Guidelines](https://docs.fontawesome.com/web/add-icons/upload-icons/icon-design.md): Guidelines and best practices for designing custom icons to upload to Font Awesome.
+- [Icon Packs, Families, and Styles](https://docs.fontawesome.com/web/dig-deeper/styles.md): Overview of the various Font Awesome icon styles and how to use them.
+- [Icon Upgrades](https://docs.fontawesome.com/web/use-with/wordpress/icon-upgrades.md): How to upgrade and manage Font Awesome icons in WordPress projects.
+- [Icon Wizard](https://docs.fontawesome.com/web/add-icons/icon-wizard.md): Use the Icon Wizard tool to customize and generate Font Awesome icons for your site.
+- [Icons in a List](https://docs.fontawesome.com/web/style/lists.md): Tips for using and styling Font Awesome icons within HTML lists.
+- [Install Manually](https://docs.fontawesome.com/web/use-with/wordpress/install-manually.md): Step-by-step instructions for manually installing Font Awesome in WordPress.
+- [Javascript Libraries](https://docs.fontawesome.com/web/use-with/javascript-libraries.md): Guides for using Font Awesome icons with popular JavaScript libraries and frameworks.
+- [Kit Package API](https://docs.fontawesome.com/web/dig-deeper/kit-package-api.md): Details about the Kit Package API for managing Font Awesome kits programmatically.
+- [Layering Text & Counters](https://docs.fontawesome.com/web/style/layer.md): How to layer multiple Font Awesome icons for advanced visual effects.
+- [Masking](https://docs.fontawesome.com/web/style/mask.md): Guide to masking Font Awesome icons for creative styling effects.
+- [Migrate from Fort Awesome](https://docs.fontawesome.com/web/dig-deeper/migrate-from-fort.md): Instructions for importing Font Awesome icons from Fort into your web project.
+- [Performance](https://docs.fontawesome.com/web/dig-deeper/performance.md): Tips and techniques for optimizing Font Awesome performance in your web projects.
+- [Power Transforms](https://docs.fontawesome.com/web/style/power-transform.md): Learn how to use power transforms to manipulate Font Awesome icons.
+- [Prep Icons for Upload](https://docs.fontawesome.com/web/add-icons/upload-icons/prep-icons.md): Instructions for preparing your custom icons before uploading to Font Awesome.
+- [Quick Start](https://docs.fontawesome.com/web/setup/get-started.md): Step-by-step guide to help you start using Font Awesome icons in your web projects.
+- [Rotate Icons](https://docs.fontawesome.com/web/style/rotate.md): How to rotate Font Awesome icons for different visual orientations.
+- [Sass (SCSS)](https://docs.fontawesome.com/web/use-with/scss.md): Instructions for integrating Font Awesome icons into your Sass/SCSS workflow.
+- [Security](https://docs.fontawesome.com/web/dig-deeper/security.md): Security considerations and best practices when using Font Awesome.
+- [Set Up with React](https://docs.fontawesome.com/web/use-with/react.md): Guides and resources for integrating Font Awesome icons into React projects.
+- [Set Up with React Native](https://docs.fontawesome.com/web/use-with/react-native.md): Steps for integrating Font Awesome icons into React Native mobile applications.
+- [Set Up with Vue](https://docs.fontawesome.com/web/use-with/vue.md): Guides and resources for integrating Font Awesome icons into Vue.js projects.
+- [Set Up with WordPress](https://docs.fontawesome.com/web/use-with/wordpress.md): Guides and resources for using Font Awesome icons in WordPress sites.
+- [Sizing Icons](https://docs.fontawesome.com/web/style/size.md): Techniques for resizing Font Awesome icons in your web projects.
+- [Squarespace](https://docs.fontawesome.com/web/use-with/squarespace.md): Guide to adding and customizing Font Awesome icons on Squarespace websites.
+- [Stacking Icons](https://docs.fontawesome.com/web/style/stack.md): How to stack multiple Font Awesome icons for layered effects.
+- [Style Cheatsheet](https://docs.fontawesome.com/web/style/style-cheatsheet.md): Quick reference for styling Font Awesome icons in web projects.
+- [Style Icons with WordPress](https://docs.fontawesome.com/web/use-with/wordpress/style.md): Tips and techniques for styling Font Awesome icons in WordPress.
+- [Styling Basics](https://docs.fontawesome.com/web/style/basics.md): Introduction to basic styling options for Font Awesome icons in web projects.
+- [Styling Icons with React Native](https://docs.fontawesome.com/web/use-with/react-native/style.md): Tips and techniques for styling Font Awesome icons in React Native applications.
+- [Styling with Font Awesome](https://docs.fontawesome.com/web/style.md): Overview of styling options and techniques for Font Awesome icons on the web.
+- [Subsetting](https://docs.fontawesome.com/web/dig-deeper/subsetting.md): Guide to subsetting Font Awesome icons for improved performance and reduced file size.
+- [SVG Async Loading](https://docs.fontawesome.com/web/dig-deeper/svg-async.md): How to load and use Font Awesome SVG icons asynchronously in your projects.
+- [SVG Core](https://docs.fontawesome.com/web/dig-deeper/svg-core.md): Details about the SVG Core library and its role in Font Awesome.
+- [SVG Icon Names](https://docs.fontawesome.com/web/add-icons/svg-icon-names.md): Reference for Font Awesome SVG icon names and how to use them in your projects.
+- [SVG Sprites](https://docs.fontawesome.com/web/add-icons/svg-sprites.md): Learn how to use Font Awesome icons as SVG sprites for efficient rendering.
+- [SVG Symbols](https://docs.fontawesome.com/web/add-icons/svg-symbols.md): Guide to adding Font Awesome icons as SVG symbols for reusable graphics.
+- [SVG Unicodes](https://docs.fontawesome.com/web/add-icons/svg-unicodes.md): Information about SVG unicodes for Font Awesome icons and how to use them.
+- [The Icon Canvas](https://docs.fontawesome.com/web/style/icon-canvas.md): Details about the icon canvas and how Font Awesome icons are rendered.
+- [Tokens](https://docs.fontawesome.com/web/dig-deeper/tokens.md): Information about using tokens with Font Awesome for advanced customization.
+- [Troubleshoot](https://docs.fontawesome.com/web/use-with/react/troubleshoot.md): Solutions and tips for resolving common Font Awesome issues in React projects.
+- [Troubleshoot](https://docs.fontawesome.com/web/use-with/react-native/troubleshoot.md): Solutions and tips for resolving common Font Awesome issues in React Native projects.
+- [Troubleshoot Uploads](https://docs.fontawesome.com/web/add-icons/upload-icons/troubleshoot.md): Solutions and tips for resolving issues when uploading custom icons to Font Awesome.
+- [Troubleshooting Conflicts](https://docs.fontawesome.com/web/use-with/wordpress/troubleshoot.md): Solutions and tips for resolving common Font Awesome issues in WordPress.
+- [Upgrade to v7 with React](https://docs.fontawesome.com/upgrade/react.md): Instructions for upgrading Font Awesome in React applications to v7.
+- [Upgrade to v7 with Vue](https://docs.fontawesome.com/upgrade/vue.md): Instructions for upgrading Font Awesome in Vue.js applications to v7.
+- [Upload Your Own Icons](https://docs.fontawesome.com/web/add-icons/upload-icons.md): Step-by-step guide for uploading your own custom icons to Font Awesome.
+- [Use a Kit](https://docs.fontawesome.com/web/setup/use-kit.md): Guide to setting up and customizing Font Awesome Kits for your website.
+- [Use Font Awesome on the Web](https://docs.fontawesome.com/web.md): Guides and resources for setting up, using, and styling Font Awesome icons in web projects.
+- [Use React Native with...](https://docs.fontawesome.com/web/use-with/react-native/use-with.md): Using Font Awesome with Expo, bare React Native CLI projects, and TypeScript.
+- [Use React with...](https://docs.fontawesome.com/web/use-with/react/use-with.md): Step-by-step instructions for setting up and using Font Awesome with React.
+- [Use Vue with...](https://docs.fontawesome.com/web/use-with/vue/use-with.md): Step-by-step instructions for setting up and using Font Awesome with Vue.js.
+- [Using a Package Manager](https://docs.fontawesome.com/web/setup/packages.md): Learn how to install and use Font Awesome packages in your web development workflow.
+- [Using Page Builders](https://docs.fontawesome.com/web/use-with/wordpress/page-builders.md): How to add and customize Font Awesome icons using WordPress page builders.
+- [Web Fonts vs SVG](https://docs.fontawesome.com/web/dig-deeper/webfont-vs-svg.md): Comparison of webfont and SVG approaches for using Font Awesome icons.
+
+## Desktop
+
+- [Duotone Icons on the Desktop](https://docs.fontawesome.com/desktop/add-icons/duotone-desktop.md): Guide to using and styling Font Awesome duotone icons on desktop platforms.
+- [Figma Plugin](https://docs.fontawesome.com/desktop/add-icons/figma-plugin.md): Instructions for using the Font Awesome Figma plugin to add icons to your designs.
+- [Font Awesome on the Desktop](https://docs.fontawesome.com/desktop.md): Guides and resources for installing and using Font Awesome icons on desktop platforms.
+- [Get Started on the Desktop](https://docs.fontawesome.com/desktop/setup/get-started.md): Step-by-step guide to help you start using Font Awesome icons on your desktop.
+- [Use a Downloaded Kit](https://docs.fontawesome.com/desktop/setup/kit-download.md): Instructions for downloading and installing a Font Awesome kit for desktop use.
+- [Using Glyphs](https://docs.fontawesome.com/desktop/add-icons/glyphs.md): How to add and use Font Awesome glyphs in desktop applications.
+- [Using Ligatures](https://docs.fontawesome.com/desktop/add-icons/ligatures.md): Guide to using Font Awesome ligatures in desktop applications for advanced icon usage.
+- [Using SVGs](https://docs.fontawesome.com/desktop/add-icons/icons-svg.md): Instructions for adding Font Awesome icons as SVG files in desktop environments.
+
+## APIs
+
+- [Authorization Scopes](https://docs.fontawesome.com/apis/graphql/auth.md): Guide to authenticating requests when using the Font Awesome GraphQL API.
+- [Configuration](https://docs.fontawesome.com/apis/javascript/configuration.md): Guide to configuring Font Awesome using JavaScript for custom icon setups.
+- [Data Attributes](https://docs.fontawesome.com/apis/conflict-detection/data-attributes.md): Documentation for data attributes used in Font Awesome conflict detection.
+- [Font Awesome APIs](https://docs.fontawesome.com/apis.md): Overview and documentation for the various Font Awesome APIs available for developers.
+- [Get Started](https://docs.fontawesome.com/apis/conflict-detection.md): Overview and usage of the Font Awesome conflict detection API.
+- [Get Started](https://docs.fontawesome.com/apis/graphql.md): Overview and documentation for using the Font Awesome GraphQL API.
+- [Get Started](https://docs.fontawesome.com/apis/rest.md): Overview and documentation for using the Font Awesome REST API.
+- [Getting Started](https://docs.fontawesome.com/apis/javascript.md): Overview and documentation for using Font Awesome's JavaScript API.
+- [Icon Library](https://docs.fontawesome.com/apis/javascript/icon-library.md): Documentation for managing and accessing Font Awesome icons via the JavaScript icon library API.
+- [Import Icons](https://docs.fontawesome.com/apis/javascript/import-icons.md): Instructions for importing Font Awesome icons into your project using JavaScript.
+- [Methods](https://docs.fontawesome.com/apis/conflict-detection/methods.md): Reference for methods available in the Font Awesome conflict detection API.
+- [Methods](https://docs.fontawesome.com/apis/javascript/methods.md): Reference for JavaScript methods available in the Font Awesome API.
+- [Mutation Fields](https://docs.fontawesome.com/apis/graphql/mutation-fields.md)
+- [Objects](https://docs.fontawesome.com/apis/graphql/objects.md): Reference for objects available in the Font Awesome GraphQL API schema.
+- [Properties](https://docs.fontawesome.com/apis/conflict-detection/properties.md): Documentation for properties used in Font Awesome conflict detection.
+- [Query Complexity](https://docs.fontawesome.com/apis/graphql/complexity.md): Information about query complexity and limits in the Font Awesome GraphQL API.
+- [Query Fields](https://docs.fontawesome.com/apis/graphql/query-fields.md): Documentation for query fields supported by the Font Awesome GraphQL API.
+- [SVG Core Plugins](https://docs.fontawesome.com/apis/javascript/plugins.md): Documentation for using and creating plugins with the Font Awesome JavaScript API.
+- [Token Endpoint](https://docs.fontawesome.com/apis/graphql/token-endpoint.md): Guide to using the token endpoint for authentication in the Font Awesome GraphQL API.
+- [Tree-Shaking](https://docs.fontawesome.com/apis/javascript/tree-shaking.md): Guide to optimizing Font Awesome usage with tree shaking in JavaScript projects.
+- [Troubleshooting](https://docs.fontawesome.com/apis/javascript/troubleshoot.md): Solutions and tips for resolving issues with the Font Awesome JavaScript API.

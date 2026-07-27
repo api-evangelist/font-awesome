@@ -1,7 +1,18 @@
 aid: font-awesome
 name: Font Awesome
-description: Font Awesome is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Font Awesome is the web's most popular icon library and toolkit, providing
+  thousands of SVG, font, and CSS icons across multiple styles and families for
+  web, desktop, and mobile projects. Beyond the icon sets and framework
+  components (React, Vue, Angular, Ember, Svelte, React Native, WordPress), Font
+  Awesome operates a public GraphQL API at api.fontawesome.com that lets
+  developers programmatically query releases, search icons and their metadata,
+  resolve family-styles and unicode values, and — with an authenticated access
+  token — read account Kits, entitlements, and download subsets. The API uses a
+  token-exchange endpoint that resolves an account API token into a short-lived
+  bearer access token scoped by permission (public, kits_read, svg_icons_free,
+  svg_icons_pro, and more). Font Awesome also ships a first-party `fa` CLI and
+  official AI agent skills for icon discovery and setup.
 url: https://raw.githubusercontent.com/api-evangelist/font-awesome/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +20,130 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://fontawesome.com/images/open-graph/default.png
 tags:
+- Icons
+- SVG
+- Fonts
+- Web Design
+- Developer Tools
+- GraphQL
+- Icon Library
+- Frontend
+- Design System
 - Company
-apis: []
+apis:
+- name: Font Awesome GraphQL API
+  description: >-
+    Public GraphQL API for programmatically querying Font Awesome releases,
+    searching icons and their metadata (family-styles, unicode, aliases, SVG
+    path data), and — with an access token — reading account Kits, icon uploads,
+    entitlements, and creating Kit downloads and subsets. Most fields are public;
+    protected fields require an access token minted at the /token endpoint and
+    scoped by permission.
+  humanURL: https://docs.fontawesome.com/apis/graphql
+  baseURL: https://api.fontawesome.com
+  tags:
+  - GraphQL
+  - Icons
+  - Search
+  properties:
+  - type: GraphQL
+    url: graphql/font-awesome.graphql
+  - type: GraphQL
+    name: Introspection
+    url: graphql/font-awesome-introspection.json
+  - type: Authentication
+    url: authentication/font-awesome-authentication.yml
+  - type: OAuthScopes
+    url: scopes/font-awesome-scopes.yml
+  - type: Conventions
+    url: conventions/font-awesome-conventions.yml
+  - type: DataModel
+    url: data-model/font-awesome-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/font-awesome-lifecycle.yml
+  - type: Conformance
+    url: conformance/font-awesome-conformance.yml
+  - type: MCPServer
+    url: mcp/font-awesome-mcp.yml
+common:
+- type: DeveloperPortal
+  url: https://docs.fontawesome.com/apis/
+- type: Documentation
+  url: https://docs.fontawesome.com/
+- type: APIReference
+  url: https://docs.fontawesome.com/apis/graphql/query-fields
+- type: GettingStarted
+  url: https://docs.fontawesome.com/apis/graphql/get-started
+- type: Authentication
+  url: authentication/font-awesome-authentication.yml
+- type: OAuthScopes
+  url: scopes/font-awesome-scopes.yml
+- type: SDKs
+  url: packages/font-awesome-packages.yml
+- type: Packages
+  url: packages/font-awesome-packages.yml
+- type: CLI
+  url: cli/font-awesome-cli.yml
+- type: Components
+  url: components/font-awesome-components.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: MCPServer
+  url: mcp/font-awesome-mcp.yml
+- type: LLMsTxt
+  url: llms/font-awesome-llms.txt
+- type: Conventions
+  url: conventions/font-awesome-conventions.yml
+- type: DataModel
+  url: data-model/font-awesome-data-model.yml
+- type: Conformance
+  url: conformance/font-awesome-conformance.yml
+- type: Lifecycle
+  url: lifecycle/font-awesome-lifecycle.yml
+- type: ChangeLog
+  url: changelog/font-awesome-changelog.yml
+- type: WellKnown
+  url: well-known/font-awesome-well-known.yml
+- type: DomainSecurity
+  url: security/font-awesome-domain-security.yml
+- type: Blog
+  url: https://blog.fontawesome.com/
+- type: GitHubOrganization
+  url: https://github.com/FortAwesome
+- type: Pricing
+  url: https://fontawesome.com/plans
+- type: Login
+  url: https://fontawesome.com/account
+- type: Support
+  url: https://fontawesome.com/support
+- type: PrivacyPolicy
+  url: https://fontawesome.com/privacy
+- type: TermsOfService
+  url: https://fontawesome.com/license
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

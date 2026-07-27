@@ -1,0 +1,530 @@
+# Font Awesome GraphQL API schema (SDL)
+# Generated from introspection of https://api.fontawesome.com
+# schema { query: RootQueryType, mutation: RootMutationType }
+
+"""A valid kit build_type."""
+enum BuildType {
+  DESKTOP
+  WEB
+}
+
+"""A valid family name."""
+enum Family {
+  CHISEL
+  CLASSIC
+  DUOTONE
+  ETCH
+  GRAPHITE
+  JELLY
+  JELLY_DUO
+  JELLY_FILL
+  MOSAIC
+  NOTDOG
+  NOTDOG_DUO
+  PIXEL
+  SHARP
+  SHARP_DUOTONE
+  SLAB
+  SLAB_DUO
+  SLAB_PRESS
+  SLAB_PRESS_DUO
+  THUMBPRINT
+  UTILITY
+  UTILITY_DUO
+  UTILITY_FILL
+  VELLUM
+  WHITEBOARD
+}
+
+"""A valid kit download result status."""
+enum KitDownloadStatus {
+  FAILED
+  PENDING
+  READY
+}
+
+"""An option for how to search icons in kits."""
+enum KitSearchMode {
+  CUSTOM
+  OFFICIAL
+}
+
+"""How a Kit's subset is defined.
+The family-styles available to a kit are discoverable through the account's `IconCollection`."""
+enum KitSubsetType {
+  AUTO
+  CUSTOM
+  FULL
+}
+
+"""A license value."""
+enum License {
+  ANY
+  FREE
+  PRO
+}
+
+"""A valid style name."""
+enum Style {
+  BRANDS
+  DUOTONE
+  LIGHT
+  REGULAR
+  SEMIBOLD
+  SOLID
+  THIN
+}
+
+input FamilyStyleFilter {
+  family: Family!
+  style: Style!
+}
+
+"""A complete family-style identified by both canonical parts. Used as the `pair`
+member of `FamilyStyleSelector`."""
+input FamilyStylePair {
+  family: String!
+  style: String!
+}
+
+"""Selects a single family-style. Exactly one member
+must be supplied and non-null; the three forms are mutually exclusive:
+
+- `pair` — a family name and style name together;
+- `shorthand` — a single shorthand term, e.g. "solid", "notdog-duo-solid";
+- `prefix` — a single prefix term, e.g. "fas", "fass"."""
+input FamilyStyleSelector {
+  pair: FamilyStylePair
+  prefix: String
+  shorthand: String
+}
+
+"""An icon to subset"""
+input SubsetIcon {
+  name: String
+  styles: [String]
+  version: String
+}
+
+"""Input argument for filtering families and styles of SVGs."""
+input SvgsFilter {
+  familyStyles: [FamilyStyleFilter!]
+}
+
+"""A Font Awesome account."""
+type Account {
+  email: String
+  iconCollection(version: String): IconCollection
+  id: Int
+  kit(token: String!): Kit
+  kits: [Kit]
+  proCdnReferrers: ProCdnReferrers
+}
+
+"""Name and unicode aliases."""
+type Aliases {
+  names: [String!]!
+  unicodes: UnicodeAliases
+}
+
+"""Metadata about the download formats available for this release."""
+type Download {
+  separatesWebDesktop: Boolean!
+}
+
+"""A combination of family and style."""
+type FamilyStyle {
+  family: String!
+  label: String!
+  prefix: String!
+  shorthand: String!
+  style: String!
+  visualTags: [VisualTag!]!
+}
+
+"""A single family-style entry in an Icon Collection's curated subset.
+
+Identifies either "this whole family-style is included" (`only` is null) or
+"only these specific icons within this family-style are included" (`only` is
+a paginated `IconVariantsPaginated` of those icons, each paired with this
+entry's family-style)."""
+type FamilyStyleSubset {
+  familyStyle: FamilyStyle!
+  iconVariantsPaginated(page: Int, pageSize: Int): IconVariantsPaginated!
+  only(page: Int, pageSize: Int): IconVariantsPaginated
+}
+
+"""A page of `FamilyStyleSubset`s with pagination metadata."""
+type FamilyStyleSubsetPaginated {
+  familyStyles: [FamilyStyleSubset!]!
+  page: Int!
+  pageSize: Int!
+  totalFamilyStyleCount: Int!
+  totalPageCount: Int!
+}
+
+"""Indicates for each license type, in which families and styles this icon appears."""
+type FamilyStylesByLicense {
+  free: [FamilyStyle!]!
+  pro: [FamilyStyle!]!
+}
+
+"""A single official icon within a particular release."""
+type Icon {
+  aliases: Aliases
+  changes: [String!]!
+  familyStylesByLicense: FamilyStylesByLicense!
+  id: String!
+  label: String!
+  membership: Membership! @deprecated(reason: "This field produces only legacy style names without reference to families. Styles in the Sharp family will not be found here, even if they are available for this icon and license. Use the familyStylesByLicense field instead.")
+  shim: Shim
+  styles: [String!]! @deprecated(reason: "This field produces only legacy style names without reference to families. Styles in the Sharp family will not be found here, even if they are available for this icon and license. Use the familyStylesByLicense field instead.")
+  svgs(filter: SvgsFilter): [Svg!]
+  unicode: String! @deprecated(reason: "Prefer unicodeInt or unicodeHex, because their field names make their encodings unambiguous.")
+  unicodeHex: String!
+  unicodeInt: Int!
+}
+
+"""An Icon Collection is a grouping of Icon Packs that are available to a subscription plan."""
+type IconCollection {
+  iconPacks: [IconPack!]!
+  label: String!
+  labelIconName: String!
+  labelIconPrefix: String!
+  name: String!
+  subset: IconCollectionSubset
+}
+
+"""The subset structure for an Icon Collection. Carries the per-family-style
+breakdown of which icons are curated into this collection."""
+type IconCollectionSubset {
+  familyStyleSubset(family: String!, style: String!): FamilyStyleSubset
+  familyStyleSubsets: [FamilyStyleSubset!]!
+}
+
+"""Metadata about icon counts in Free vs. Pro in this release."""
+type IconCount {
+  free: Int!
+  pro: Int!
+}
+
+"""An Icon Pack is a group of family-styles with a common visual personality (e.g., "classic", "sharp", "whiteboard", "notdog", "jelly")."""
+type IconPack {
+  description: String!
+  designerName: String
+  designerUrl: String
+  familyStyles: [FamilyStyle!]!
+  label: String!
+  labelIconName: String!
+  labelIconPrefix: String!
+  name: String!
+  sourceCanvasHeight: Int!
+  sourceGridHeight: Int!
+}
+
+"""An icon uploaded to a kit. A valid Font Awesome SVG can be built from the data
+in this object, for example:
+
+```
+<svg class="svg-inline--fa" viewBox="0 0 ${width} ${height}">
+  <path d="${path}" />
+</svg>
+```
+
+Or the icon could be referenced using CSS class names, such as on an `<i>` tag like:
+
+```
+<i class="fak fa-${name}"></i>
+```
+
+Notice `fak` is used as the style prefix class for all icon uploads (think: Font Awesome Kit).
+
+Or the icon could be referenced using a CSS pseudo-element:
+
+HTML:
+```
+<ul class="fancy-list">
+  <li>Alpha</li>
+  <li>Beta</li>
+</ul>
+```
+
+CSS:
+```
+.fancy-list {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.fancy-list li:before {
+  content: '\e001';
+  font-family: 'Font Awesome Kit';
+  margin-right: 0.25em;
+}
+```
+
+Replace `e001` with the unicode value found in this icon upload object.
+
+Note that the font-family for an icon upload is always "Font Awesome Kit"."""
+type IconUpload {
+  height: String!
+  html: String!
+  iconDefinition: Json!
+  name: String!
+  path: String! @deprecated(reason: "This field only provides the primary path. Use pathData, which may include multiple paths, such as for Duotone icons.")
+  pathData: [String!]!
+  unicode: Int! @deprecated(reason: "Prefer unicodeInt or unicodeHex, because their field names make their encodings unambiguous.")
+  unicodeHex: String!
+  unicodeInt: Int!
+  version: Int!
+  width: String!
+}
+
+"""One family-style variant of an icon, with its SVG data.
+
+An icon variant is an official icon in a specific family-style.
+For example, "mug-saucer" in "sharp-solid" is a different icon variant than
+"mug-saucer" in "sharp-regular". What does not vary across these are the properties
+of the icon soul, such as its name, unicode, label, and aliases.
+
+The SVG may be null when the caller lacks the auth scope required to
+download SVG content (e.g., Pro Lite accounts)."""
+type IconVariant {
+  familyStyle: FamilyStyle!
+  name: String!
+  svg: Svg
+  unicodeHex: String!
+  unicodeInt: Int!
+}
+
+"""A page of `IconVariant`s with pagination metadata.
+
+An icon variant is an official icon in a specific family-style.
+For example, "mug-saucer" in "sharp-solid" is a different icon variant than
+"mug-saucer" in "sharp-regular". What does not vary across these are the properties
+of the icon soul, such as its name, unicode, label, and aliases."""
+type IconVariantsPaginated {
+  iconVariants: [IconVariant!]!
+  page: Int!
+  pageSize: Int!
+  totalIconVariantCount: Int!
+  totalPageCount: Int!
+}
+
+"""A Font Awesome official icon together with a list of icon variants.
+
+An icon variant is an official icon in a specific family-style.
+For example, "mug-saucer" in "sharp-solid" is a different icon variant than
+"mug-saucer" in "sharp-regular". What does not vary across these are the properties
+of the icon soul, such as its name, unicode, label, and aliases.
+
+The set of icon variants returned depends on the surrounding context — under
+`searchKit`, the list contains only the variants in the kit's subset that
+the account is licensed to use; future fields returning this type may
+filter by other criteria (e.g., release version, icon collection)."""
+type IconWithVariants {
+  label: String!
+  name: String!
+  unicodeHex: String!
+  unicodeInt: Int!
+  variants: [IconVariant!]!
+}
+
+type IconsPaginated {
+  icons: [Icon!]!
+  page: Int!
+  pageSize: Int!
+  totalIconCount: Int!
+  totalPageCount: Int!
+}
+
+"""A kit"""
+type Kit {
+  autoAccessibilityEnabled: Boolean!
+  domains: [String!]!
+  familyStyleMember(selector: FamilyStyleSelector!): FamilyStyleSubset
+  familyStylesPaginated(page: Int, pageSize: Int): FamilyStyleSubsetPaginated!
+  icon(name: String!): IconWithVariants
+  iconUploads: [IconUpload]
+  iconVariantsPaginated(page: Int, pageSize: Int): IconVariantsPaginated!
+  integrityHash: String! @deprecated(reason: "kits are dropping support for SRI")
+  kitRevision: Int!
+  licenseSelected: String!
+  minified: Boolean!
+  name: String!
+  permits: Permits
+  release: Release!
+  searchKit(page: Int, pageSize: Int, query: String!, searchMode: KitSearchMode!): SearchKitResult
+  shimEnabled: Boolean!
+  showcaseCacheKey: String!
+  showcaseIcons(limitPerFamilyStyle: Int, page: Int, pageSize: Int, selector: FamilyStyleSelector): IconVariantsPaginated!
+  status: String!
+  subsetType: KitSubsetType!
+  subsetTypeLabel: String!
+  technologySelected: String!
+  token: ID!
+  useIntegrityHash: Boolean! @deprecated(reason: "kits are dropping support for SRI")
+  version: String!
+}
+
+"""An object representing the result of a kit download request, as created by the `createKitDownload` mutation.
+When the corresponding kit download is ready, the `url` field of this object will contain the link to download the kit,
+and the `status` field will be `READY`."""
+type KitDownload {
+  buildId: String!
+  status: KitDownloadStatus!
+  url: String
+}
+
+"""Indicates for each license type, in which families and/or styles this icon appears."""
+type Membership {
+  free: [String!]!
+  pro: [String!]!
+}
+
+"""Permits for a kit."""
+type Permits {
+  embedProSvg: [FamilyStyle!]!
+}
+
+type ProCdnReferrers {
+  active: Boolean!
+  hostnames: [String!]!
+  limit: Int!
+}
+
+"""All metadata for a Font Awesome release."""
+type Release {
+  date: Date!
+  download: Download!
+  familyStyles: [FamilyStyle!]!
+  icon(name: String!): Icon
+  iconCount: IconCount!
+  iconIdCount: IconCount!
+  icons(license: String): [Icon!]! @deprecated(reason: "Use `iconsPaginated` for better performance and more flexible querying.")
+  iconsPaginated(license: License, page: Int, pageSize: Int): IconsPaginated
+  isLatest: Boolean!
+  srisByLicense: SrisByLicense!
+  version: String!
+}
+
+type RootMutationType {
+  createKitDownload(buildType: BuildType!, kitToken: String!): KitDownload!
+  createSubset(icons: [SubsetIcon], id: String, version: String): SubsetZipArchive
+}
+
+type RootQueryType {
+  getKitDownload(buildId: String!, buildType: BuildType!, kitToken: String!): KitDownload!
+  me: Account
+  release(version: String!): Release
+  releases: [Release]!
+  search(first: Int, query: String!, version: String!): [Icon] @deprecated(reason: "Use `searchPaginated` instead, which supports pagination of results, or `searchKit` for searches constrained by a kit's subset.")
+  searchPaginated(page: Int, pageSize: Int, query: String!, version: String!): IconsPaginated
+}
+
+type RootSubscriptionType {
+  subsetCreated(id: String): SubsetZipArchive
+}
+
+type SearchKitResult {
+  icons: [SearchKitIcon!]!
+  page: Int!
+  pageSize: Int!
+  totalIconCount: Int!
+  totalPageCount: Int!
+}
+
+"""A renaming or change in style for this icon between Font Awesome 4 and Font Awesome 5.
+
+Examples of icons with no shims include intersection and coffee.
+The intersection icon first apppeared in Font Awesome 5, and therefore has
+no shim.
+
+The coffee icon appeared prior to Font Awesome 5, yet because its
+equivalent form in Font Awesome 5 is in the Solid (fas) style, and because
+that is the default style in Font Awesome 5, no shim is required.
+
+Examples of icons with shims include bluetooth, bath, and address-book.
+
+The bluetooth icon's name is the same in Font Awesome 4 and 5, but because
+it is a brand icon, and all brand icons appear in the Font Awesome 5
+Brand (fab) style, the shim exists to map it into that style.
+
+The bath icon in Font Awesome 5 is equivalent to the icon that was called
+"bathtub" in Font Awesome 4. The shim maps from the old name to the new name.
+
+The address-book icon is equivalent to what was called address-book-o in
+Font Awesome 4. Its name change in Font Awesome 5
+indicates a naming convention change. Instead of the "-o" in the icon name,
+indicating an "outline" style for some icons in Font Awesome 4, Font Awesome 5
+has a Regular (far) style and all icons have Regular style variants. Since
+the Regular (far) style is a non-default style in Font Awesome 5, the shim
+must not only map the icon's name from address-book-o, but also its style
+into the Font Awesome 5 Regular (far) style.
+
+Learn more in the [docs on fontawesome.com](https://fontawesome.com/how-to-use/graphql-api/objects/shim)."""
+type Shim {
+  id: String!
+  name: String
+  prefix: String
+}
+
+"""A [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) hash value for a CDN resource at a relative path."""
+type Sri {
+  path: String!
+  value: String!
+}
+
+"""An Sri collection for a Font Awesome release, organized by license: free or pro.
+
+The relative path "css/all.css" is valid on both the Free and Pro CDNs, but
+refers to two different resources with different contents, and therefore different hashes."""
+type SrisByLicense {
+  free: [Sri!]!
+  pro: [Sri!]!
+}
+
+"""URI location of subsetted Font Awesome in ZIP archive format"""
+type SubsetZipArchive {
+  id: String
+  readyForDownload: Boolean
+  url: String
+}
+
+"""An SVG for an icon in a specific family and style.
+
+The various separate fields can be used to construct an
+`<svg>` HTML element. Alternatively, the `html` field provides
+a fully formed `<svg>` HTML element."""
+type Svg {
+  familyStyle: FamilyStyle!
+  height: Int!
+  html: String!
+  iconDefinition: Json!
+  pathData: [String!]!
+  width: Int!
+}
+
+type UnicodeAliases {
+  composite: [String!]!
+  primary: [String!]!
+  secondary: [String!]!
+}
+
+"""A descriptive tag like "filled", "outlined", or "dimensional" applied to a
+family-style.
+
+Each tag carries its own label icon so a UI can render a tag chip."""
+type VisualTag {
+  label: String!
+  labelIconName: String!
+  labelIconPrefix: String!
+  name: String!
+}
+
+scalar Date
+
+scalar Json
+
+union SearchKitIcon = IconUpload | IconWithVariants

@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fontawesome.com/apis/graphql/auth
+docs: https://docs.fontawesome.com/apis/graphql/auth
+model: >-
+  Scopes are attached to an account API token; the access token minted at the
+  token endpoint inherits those scopes. Account holders can self-generate tokens
+  with the `public` and `kits_read` scopes; other scopes require contacting
+  Font Awesome support.
+token_endpoint: https://api.fontawesome.com/token
+scopes:
+  - scope: public
+    description: Default scope granted to all requests, including unauthenticated ones; access to free/public metadata.
+    self_serviceable: true
+  - scope: kits_read
+    description: Read-only access to Kit configuration metadata and the account's icon uploads (Pro).
+    self_serviceable: true
+  - scope: kits_download
+    description: Permits downloading Kits (Pro).
+    self_serviceable: false
+  - scope: profile_read
+    description: Read-only access to personally identifiable account information such as email address.
+    self_serviceable: false
+  - scope: domains_read
+    description: Read-only access to the account's CDN referrer/domain whitelist (Pro).
+    self_serviceable: false
+  - scope: entitlements_read
+    description: Read-only access to account entitlements — the features/Icon Collections the account may use.
+    self_serviceable: false
+  - scope: svg_icons_free
+    description: Read-only access to SVG path data for Font Awesome Free icons.
+    self_serviceable: false
+  - scope: svg_icons_pro
+    description: Read-only access to SVG path data for Pro-exclusive families plus all Free SVGs (Pro).
+    self_serviceable: false

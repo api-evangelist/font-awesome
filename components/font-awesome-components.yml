@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/FortAwesome/fa-icon-chooser
+description: >-
+  Client-side / embeddable UI components published by Font Awesome, distinct from
+  the server-side framework SDKs in packages/. These render or select icons in a
+  host application.
+components:
+  - family: icon-picker
+    name: fa-icon-chooser
+    kind: web-component
+    package: "@fortawesome/fa-icon-chooser"
+    loader: "@fortawesome/fa-icon-chooser (custom element <fa-icon-chooser>)"
+    repo: https://github.com/FortAwesome/fa-icon-chooser
+    npm: https://www.npmjs.com/package/@fortawesome/fa-icon-chooser
+    description: >-
+      Framework-agnostic web component (Stencil-built custom element) that
+      presents a searchable icon picker backed by the Font Awesome GraphQL API /
+      a Kit; embeddable in any web app or CMS.
+  - family: kit-embed
+    name: Kit CDN loader
+    kind: hosted-script
+    loader: "<script src=\"https://kit.fontawesome.com/<kit-id>.js\" crossorigin=\"anonymous\"></script>"
+    description: >-
+      Hosted per-account Kit script that auto-subsets and injects icons at
+      runtime; the prebuilt embed surface for adding Font Awesome without a build
+      step.
+    docs: https://docs.fontawesome.com/web/setup/use-kit

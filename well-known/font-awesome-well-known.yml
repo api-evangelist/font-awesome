@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+note: >-
+  Probed the standard /.well-known/ discovery surface on the API and website
+  hosts. None returned a usable document (the API host returns HTTP 400 for
+  /.well-known/* paths; the website returns 404). Absence recorded as valid data.
+hosts:
+  - host: https://api.fontawesome.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+      - path: /.well-known/openid-configuration
+        status: 400
+      - path: /.well-known/oauth-authorization-server
+        status: 400
+      - path: /.well-known/api-catalog
+        status: 400
+      - path: /.well-known/ai-plugin.json
+        status: 400
+  - host: https://fontawesome.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
