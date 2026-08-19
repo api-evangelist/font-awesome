@@ -2,14 +2,11 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: graphql/font-awesome-introspection.json
-note: >-
-  Font Awesome does NOT publish a hosted Model Context Protocol (MCP) server. It
-  ships official agent tooling as Agent Skills instead (see skills/ and
-  https://docs.fontawesome.com/web/use-with/ai-agent-tools — installed via
-  `npx skills add FortAwesome/fontawesome-agent-tools`), backed by the `fa` CLI.
-  The tool list below is a CANDIDATE derived from the GraphQL root operations —
-  a starting point for wrapping api.fontawesome.com as an MCP server, not an
-  official Font Awesome product.
+note: Font Awesome does NOT publish a hosted Model Context Protocol (MCP) server. It ships official agent
+  tooling as Agent Skills instead (see skills/ and https://docs.fontawesome.com/web/use-with/ai-agent-tools
+  — installed via `npx skills add FortAwesome/fontawesome-agent-tools`), backed by the `fa` CLI. The tool
+  list below is a CANDIDATE derived from the GraphQL root operations — a starting point for wrapping api.fontawesome.com
+  as an MCP server, not an official Font Awesome product.
 official_agent_surface:
   kind: agent-skills
   install: npx skills add FortAwesome/fontawesome-agent-tools
@@ -20,24 +17,30 @@ server:
   transport: stdio
   backing_api: https://api.fontawesome.com
 tools:
-  - name: get_release
-    description: Get metadata for a specific Font Awesome release version.
-    source_operation: graphql/font-awesome.graphql#release
-  - name: list_releases
-    description: List all available Font Awesome releases.
-    source_operation: graphql/font-awesome.graphql#releases
-  - name: search_icons
-    description: Paginated fuzzy search for icons by name, label, and associations within a release.
-    source_operation: graphql/font-awesome.graphql#searchPaginated
-  - name: get_account
-    description: Read the authenticated account (requires access token / scopes).
-    source_operation: graphql/font-awesome.graphql#me
-  - name: get_kit_download
-    description: Poll the status of a Kit download build.
-    source_operation: graphql/font-awesome.graphql#getKitDownload
-  - name: create_kit_download
-    description: Start a Kit download build (mutation).
-    source_operation: graphql/font-awesome.graphql#createKitDownload
-  - name: create_subset
-    description: Create an icon subset archive (mutation).
-    source_operation: graphql/font-awesome.graphql#createSubset
+- name: get_release
+  description: Get metadata for a specific Font Awesome release version.
+  source_operation: graphql/font-awesome.graphql#release
+- name: list_releases
+  description: List all available Font Awesome releases.
+  source_operation: graphql/font-awesome.graphql#releases
+- name: search_icons
+  description: Paginated fuzzy search for icons by name, label, and associations within a release.
+  source_operation: graphql/font-awesome.graphql#searchPaginated
+- name: get_account
+  description: Read the authenticated account (requires access token / scopes).
+  source_operation: graphql/font-awesome.graphql#me
+- name: get_kit_download
+  description: Poll the status of a Kit download build.
+  source_operation: graphql/font-awesome.graphql#getKitDownload
+- name: create_kit_download
+  description: Start a Kit download build (mutation).
+  source_operation: graphql/font-awesome.graphql#createKitDownload
+- name: create_subset
+  description: Create an icon subset archive (mutation).
+  source_operation: graphql/font-awesome.graphql#createSubset
+deployment:
+  mode: none
+  verified: derived
+  tools: 7
+  checked: '2026-08-12'
+  source: catalog MCP census
