@@ -16,9 +16,109 @@ edges:
   detected: '2026-10-15'
   detected_by: mirror-platform-listings.py
   category: WordPress plugin
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@fortawesome/angular-fontawesome
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@fortawesome/angular-fontawesome'
+      version: 5.1.0
+      released: '2026-07-02'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/angular-fontawesome
+      repo_leg: github-org:fortawesome
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/ember-fontawesome'
+      version: 3.1.1
+      released: '2026-09-16'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/ember-fontawesome
+      repo_leg: github-org:fortawesome
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/fontawesome-free'
+      version: 7.3.1
+      released: '2026-07-15'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/fontawesome-free
+      repo_leg: domain:fontawesome.com
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/fontawesome-svg-core'
+      version: 7.3.1
+      released: '2026-07-15'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core
+      repo_leg: domain:fontawesome.com
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/react-fontawesome'
+      version: 3.5.0
+      released: '2026-07-20'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/react-fontawesome
+      repo_leg: github-org:fortawesome
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/react-native-fontawesome'
+      version: 1.0.0
+      released: '2026-04-20'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/react-native-fontawesome
+      repo_leg: github-org:fortawesome
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/svelte-fontawesome'
+      version: 0.2.4
+      released: '2025-08-19'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/svelte-fontawesome
+      repo_leg: github-org:fortawesome
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    - name: '@fortawesome/vue-fontawesome'
+      version: 3.3.3
+      released: '2026-07-21'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@fortawesome/vue-fontawesome
+      repo_leg: github-org:fortawesome
+      publisher_leg: email:fontawesome.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 generated: '2026-10-15'
 method: searched
 checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - wordpress/integrations/wordpress-integration-edges.yml
 source:
 - wordpress/integrations/wordpress-integration-edges.yml
