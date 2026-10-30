@@ -64,6 +64,116 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Font Awesome is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Font Awesome is the web's most popular icon library and toolkit, providing thousands of SVG, font, and CSS icons across multiple styles and families for web, desktop, and mobile projects. Beyond the icon sets and framework components (React, Vue, Angular, Ember, Svelte, React Native, WordPress), Font Awesome operates a public GraphQL API at api.fontawesome.com that lets developers programmatically query releases, search icons and their metadata, resolve family-styles and unicode values, and — with an authenticated access token — read account Kits, entitlements, and download subsets. The API uses a token-exchange endpoint that resolves an account API token into a short-lived bearer access token scoped by permission (public, kits_read, svg_icons_free, svg_icons_pro, and more). Font Awesome also ships a first-party `fa` CLI and official AI agent skills for icon discovery and setup.
 
-Backed by: y-combinator
+**Areas:** Icons · SVG · Fonts · Web Design · Developer Tools · GraphQL · Icon Library · Frontend · Design Systems · Company
+
+## Font Awesome on APIs.io
+
+Everything profiled for Font Awesome is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/font-awesome/](https://apis.io/providers/font-awesome/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Font Awesome GraphQL API](https://apis.io/apis/font-awesome/font-awesome-graphql-api/) — Public GraphQL API for programmatically querying Font Awesome releases, searching icons and their metadata (family-styles, unicode, aliases, SVG path data),…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [font-awesome](https://apis.io/servers/font-awesome/font-awesome/)
+
+#### Agent skills (4)
+
+Agent skills built on the API.
+
+- [add-icon](https://apis.io/agent-skills/font-awesome/add-icon/)
+- [fa-help](https://apis.io/agent-skills/font-awesome/fa-help/)
+- [setup-fa](https://apis.io/agent-skills/font-awesome/setup-fa/)
+- [suggest-icon](https://apis.io/agent-skills/font-awesome/suggest-icon/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Font Awesome Authentication](https://apis.io/security/font-awesome/font-awesome-authentication/)
+- [Font Awesome Domain Security](https://apis.io/security/font-awesome/font-awesome-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Font Awesome Scopes](https://apis.io/scopes/font-awesome/font-awesome-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.fontawesome.com/)
+- [Documentation](https://docs.fontawesome.com/)
+- [Getting started](https://docs.fontawesome.com/apis/graphql/get-started)
+- [API reference](https://docs.fontawesome.com/apis/graphql/query-fields)
+- [Pricing](https://fontawesome.com/plans)
+- [Support](https://fontawesome.com/support)
+- [Blog](https://blog.fontawesome.com/)
+- [Terms of service](https://fontawesome.com/license)
+- [Privacy policy](https://fontawesome.com/privacy)
+- [GitHub](https://github.com/FortAwesome)
+
+## API Evangelist rating
+
+**Kin Score 45.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.4 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 78.6 |
+| Access clarity | 38.2 |
+
+**Agent readiness 19.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 34.3** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/font-awesome/](https://apis.io/providers/font-awesome/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Font Awesome: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/font-awesome/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
